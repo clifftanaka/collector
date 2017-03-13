@@ -1,14 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TSY-y5-vqp">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="Collector" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +22,134 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hbs-aZ-qf7">
+                                <rect key="frame" x="16" y="64" width="343" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hbs-aZ-qf7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="074-6J-wJ3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hbs-aZ-qf7" secondAttribute="bottom" id="9Sd-Gw-Jfu"/>
+                            <constraint firstItem="hbs-aZ-qf7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="GxD-Aw-J53"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hbs-aZ-qf7" secondAttribute="trailing" id="aYJ-bk-gg3"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="etq-PB-H8T">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="zTY-CK-WZa">
+                            <connections>
+                                <segue destination="e9P-ri-6LA" kind="show" identifier="itemSegue" id="zgO-Ei-Kgf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="hbs-aZ-qf7" id="2Im-Je-cw4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="361" y="683"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="jyE-EK-jgh">
+            <objects>
+                <viewController id="e9P-ri-6LA" customClass="MainViewController" customModule="Collector" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="v9a-N6-myM"/>
+                        <viewControllerLayoutGuide type="bottom" id="woV-xl-j3h"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I0S-iV-Acu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="the_waterfront_logo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="UwQ-1d-Hwu">
+                                <rect key="frame" x="47.5" y="104" width="280" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="5B9-EY-hBB"/>
+                                    <constraint firstAttribute="height" constant="150" id="WcG-3O-WBM"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jmv-ex-wUw">
+                                <rect key="frame" x="47.5" y="294" width="280" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kno-o1-h6y">
+                                <rect key="frame" x="172" y="344" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="e9P-ri-6LA" eventType="touchUpInside" id="m9M-no-u39"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0S0-ta-LQA">
+                                <rect key="frame" x="165" y="384" width="45" height="30"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="e9P-ri-6LA" eventType="touchUpInside" id="VGb-X3-yDJ"/>
+                                    <action selector="deleteTapped:" destination="e9P-ri-6LA" eventType="touchUpInside" id="eHd-GC-U3J"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UwQ-1d-Hwu" firstAttribute="centerX" secondItem="I0S-iV-Acu" secondAttribute="centerX" id="47r-Uw-jyg"/>
+                            <constraint firstItem="0S0-ta-LQA" firstAttribute="centerX" secondItem="I0S-iV-Acu" secondAttribute="centerX" id="K4K-tH-gqL"/>
+                            <constraint firstItem="jmv-ex-wUw" firstAttribute="width" secondItem="UwQ-1d-Hwu" secondAttribute="width" id="OeB-Br-l7B"/>
+                            <constraint firstItem="kno-o1-h6y" firstAttribute="centerX" secondItem="I0S-iV-Acu" secondAttribute="centerX" id="Ot8-fQ-bBD"/>
+                            <constraint firstItem="jmv-ex-wUw" firstAttribute="centerX" secondItem="I0S-iV-Acu" secondAttribute="centerX" id="VjS-7V-a1t"/>
+                            <constraint firstItem="kno-o1-h6y" firstAttribute="top" secondItem="jmv-ex-wUw" secondAttribute="bottom" constant="20" id="YT9-ba-tND"/>
+                            <constraint firstItem="UwQ-1d-Hwu" firstAttribute="top" secondItem="v9a-N6-myM" secondAttribute="bottom" constant="40" id="akP-6s-5si"/>
+                            <constraint firstItem="jmv-ex-wUw" firstAttribute="top" secondItem="UwQ-1d-Hwu" secondAttribute="bottom" constant="40" id="bh7-EQ-jDY"/>
+                            <constraint firstItem="0S0-ta-LQA" firstAttribute="top" secondItem="kno-o1-h6y" secondAttribute="bottom" constant="10" id="xoG-AS-k5n"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="15V-Na-Wn2">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="camera" id="S0p-aF-RvY">
+                                <connections>
+                                    <action selector="cameraTapped:" destination="e9P-ri-6LA" id="HPs-x4-KsQ"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Photos" id="acB-1g-EJs">
+                                <connections>
+                                    <action selector="photosTapped:" destination="e9P-ri-6LA" id="Tfw-yZ-VUO"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addUpdateButton" destination="kno-o1-h6y" id="ZGf-sO-aGa"/>
+                        <outlet property="deleteButton" destination="0S0-ta-LQA" id="i0r-8i-vTG"/>
+                        <outlet property="imageView" destination="UwQ-1d-Hwu" id="LO4-IA-fI4"/>
+                        <outlet property="titleTextField" destination="jmv-ex-wUw" id="q9E-xn-JCZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L8Z-97-TxT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1081" y="683"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="g9A-ym-uvQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TSY-y5-vqp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PaF-oE-Our">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ZaV-S0-1V0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ct9-OB-4W2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-414" y="684"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="the_waterfront_logo.jpg" width="600" height="296"/>
+    </resources>
 </document>

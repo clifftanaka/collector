@@ -13,6 +13,8 @@
 		9117A34D1E71BFB20090A88C /* Collector.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9117A34B1E71BFB20090A88C /* Collector.xcdatamodeld */; };
 		9117A34F1E71BFB20090A88C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9117A34E1E71BFB20090A88C /* Assets.xcassets */; };
 		9117A3521E71BFB20090A88C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9117A3501E71BFB20090A88C /* LaunchScreen.storyboard */; };
+		9117A35A1E71C3700090A88C /* the_waterfront_logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9117A3591E71C3700090A88C /* the_waterfront_logo.jpg */; };
+		9117A35C1E71C48E0090A88C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9117A35B1E71C48E0090A88C /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		9117A34E1E71BFB20090A88C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9117A3511E71BFB20090A88C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9117A3531E71BFB20090A88C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9117A3591E71C3700090A88C /* the_waterfront_logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = the_waterfront_logo.jpg; sourceTree = "<group>"; };
+		9117A35B1E71C48E0090A88C /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +60,11 @@
 		9117A3431E71BFB20090A88C /* Collector */ = {
 			isa = PBXGroup;
 			children = (
+				9117A3591E71C3700090A88C /* the_waterfront_logo.jpg */,
 				9117A3441E71BFB20090A88C /* AppDelegate.swift */,
 				9117A3461E71BFB20090A88C /* ViewController.swift */,
 				9117A3481E71BFB20090A88C /* Main.storyboard */,
+				9117A35B1E71C48E0090A88C /* MainViewController.swift */,
 				9117A34E1E71BFB20090A88C /* Assets.xcassets */,
 				9117A3501E71BFB20090A88C /* LaunchScreen.storyboard */,
 				9117A3531E71BFB20090A88C /* Info.plist */,
@@ -99,6 +105,7 @@
 				TargetAttributes = {
 					9117A3401E71BFB20090A88C = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = FYWFFZU43Q;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -128,6 +135,7 @@
 			files = (
 				9117A3521E71BFB20090A88C /* LaunchScreen.storyboard in Resources */,
 				9117A34F1E71BFB20090A88C /* Assets.xcassets in Resources */,
+				9117A35A1E71C3700090A88C /* the_waterfront_logo.jpg in Resources */,
 				9117A34A1E71BFB20090A88C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,6 +150,7 @@
 				9117A34D1E71BFB20090A88C /* Collector.xcdatamodeld in Sources */,
 				9117A3471E71BFB20090A88C /* ViewController.swift in Sources */,
 				9117A3451E71BFB20090A88C /* AppDelegate.swift in Sources */,
+				9117A35C1E71C48E0090A88C /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +273,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FYWFFZU43Q;
 				INFOPLIST_FILE = Collector/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kurifu.Collector;
@@ -276,6 +286,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FYWFFZU43Q;
 				INFOPLIST_FILE = Collector/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kurifu.Collector;
@@ -303,6 +314,7 @@
 				9117A3581E71BFB20090A88C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
